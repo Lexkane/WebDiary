@@ -1,1 +1,1 @@
-# WebDiary with Spring 
+# WebDiary Service with Spring 
