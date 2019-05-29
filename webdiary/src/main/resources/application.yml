@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/web_diary?useSSL=false&serverTimezone=UTC&useUnicode=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    # Show or not log for each sql query
+    show-sql: true
+    hibernate:
+      # Hibernate ddl auto (validate, create, create-drop, update)
+      ddl-auto: validate
+
+
+server:
+  port: 8080
+

@@ -1,0 +1,41 @@
+.editor-block{
+  /*margin-top: 5%;*/
+  box-shadow: 0 4px 8px 0 #14AE14, 0 6px 20px 0 #14AE14;
+}
+.tittle{
+  width: 100%;
+  text-decoration: none;
+  border: 0;
+  text-align: center;
+  outline: none;
+}
+
+.diary-name{
+  width: 100%;
+}
+
+textarea {
+  height: 80vh;
+  width: 100%;
+  outline: none;
+  resize: none;
+  border-style: none;
+  border-color: Transparent;
+  overflow:auto;
+}
+
+button{
+  width: 80%;
+  background: none;
+  color: #14AE14;
+  border: none;
+  font: inherit ;
+  font-weight: bold;
+  cursor: pointer;
+  outline: inherit;
+  margin: 1% 1% 1% 10%;
+  box-shadow: 0 4px 8px 0 #14AE14;
+}
+button:hover{
+  color: black;
+}

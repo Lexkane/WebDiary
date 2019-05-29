@@ -1,0 +1,37 @@
+#main {
+  transition: .5s linear;
+  padding: 16px;
+}
+.card{
+  margin: 20px;
+}
+.card-header{
+  padding-right: 5px;
+}
+.card-text{
+  transition: 3s linear;
+  /*white-space: pre-wrap;*/
+}
+.diary-name{
+  width: 90%;
+  display: inline-block;
+}
+.editBtn, .deleteBtn, .addBtn{
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin: 1%;
+}
+.addBtn{
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  font-size: 350%;
+}
+.addBtn:hover{
+
+}
+

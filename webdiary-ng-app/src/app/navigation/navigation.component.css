@@ -1,0 +1,97 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: #14AE14;
+}
+.closebtn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  font-size: 30px;
+  width: 50px;
+  cursor: pointer;
+  background-color: #14AE14;
+  color: white;
+  padding: 5px;
+  border: none;
+  transition: 0.3s;
+}
+
+.openbtn:hover {
+  background-color: #009929;
+}
+
+.site-headline {
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #14AE14;
+  transition: width .5s linear;
+  padding-top: 5%;
+  box-shadow:  10px 0 50px darkgrey;
+}
+
+.account {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.account img {
+  margin: 5px;
+}
+
+#main {
+  margin-top: 80px;
+}
+
+.sd {
+  width: 260px;
+}
+
+.sd a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  display: block;
+  white-space: pre;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+
+

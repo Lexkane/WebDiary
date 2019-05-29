@@ -1,0 +1,30 @@
+<div id="mySidebar" class="sidebar">
+  <a class="closebtn" (click)="closeNav()">×</a>
+  <div class="account">
+    <a routerLink="account" (click)="closeNav()">
+      <img src="../../assets/avatars/default/default-man-avatar.png" class="rounded-circle"
+           alt="Avatar" width="250" height="250">
+    </a>
+  </div>
+  <div id="sd" class="sd">
+    <a routerLink="diary" (click)="closeNav()">Diaries</a>
+    <a routerLink="about" (click)="closeNav()">About</a>
+    <a href="sign-in" (click)="closeNav()">Log out</a>
+  </div>
+</div>
+<div id="main-header" class="header">
+  <div class="row">
+    <div class="col-sm">
+      <button id="openbtn" class="openbtn" (click)="openNav()">☰</button>
+    </div>
+    <div class="col-sm ">
+      <h1 class="site-headline" routerLink="diary">WebDiary</h1>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+<div id="main">
+  <router-outlet></router-outlet>
+</div>

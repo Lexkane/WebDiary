@@ -1,0 +1,22 @@
+<div class="diaries">
+  <div *ngFor="let diary of diaries" class="card w-75 mx-auto">
+    <div class="card-header">
+      <h5 class="diary-name"> {{diary.diaryName}}</h5>
+      <button (click)="sendToEditor(diary)" class="editBtn" routerLink="editor" type="button">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
+      <button type="button" (click)="deleteDiary(diary)" class="deleteBtn">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="card-body">
+      <p class="card-text">{{diary.diaryText}}</p>
+      <a href="#" class="btn btn-success">Open</a>
+    </div>
+  </div>
+  <button type="button" class="addBtn" (click)="createDiary()">
+    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  </button>
+</div>
+

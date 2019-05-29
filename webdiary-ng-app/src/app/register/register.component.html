@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-register ">
+        <div class="card-body">
+          <h5 class="card-title text-center">Register</h5>
+          <form class="form-register" #f="ngForm" (ngSubmit)="f.form.valid && sendRegisterInfo()">
+            <div class="form-label-group">
+              <input type="text"
+                     id="name"
+                     class="form-control"
+                     placeholder="Name"
+                     name="name"
+                     [(ngModel)]="model.name"
+                     #name="ngModel"
+                     [ngClass]="{'is-invalid' : f.submitted && name.invalid}"
+                     required
+                     minlength="4"
+              >
+            </div>
+            <div *ngIf="f.submitted && name.invalid" class="invalid-input">
+              <div *ngIf="name.errors?.required">Name is required</div>
+              <div *ngIf="name.errors?.minlength">Name is too small (at least 4 characters)</div>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <input type="text"
+                     id="surname"
+                     class="form-control"
+                     placeholder="Surname"
+                     name="surname"
+                     [(ngModel)]="model.surname"
+                     #surname="ngModel"
+                     [ngClass]="{'is-invalid':f.submitted && surname.invalid}"
+                     required
+                     minlength="4"
+              >
+            </div>
+            <div *ngIf="f.submitted && surname.invalid" class="invalid-input">
+              <div *ngIf="surname.errors?.required">Surname is required</div>
+              <div *ngIf="surname.errors?.minlength">Surname is too small (at least 4 characters)
+              </div>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <input type="email"
+                     id="inputEmail"
+                     class="form-control"
+                     placeholder="Email address"
+                     name="email"
+                     [(ngModel)]="model.email"
+                     #email="ngModel"
+                     [ngClass]="{'is-invalid': f.submitted && email.invalid}"
+                     required email
+              >
+            </div>
+            <div *ngIf="f.submitted && email.invalid" class="invalid-input">
+              <div *ngIf="email.errors?.required">Email is required</div>
+              <div *ngIf="email.errors?.email">It is not a valid email</div>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <p class="text-center">Don't reuse your bank password, we didn't spend a lot on security for this app.</p>
+              <input type="password"
+                     id="inputPassword1"
+                     class="form-control"
+                     placeholder="Password"
+                     name="password"
+                     [(ngModel)]="model.password"
+                     #pass="ngModel"
+                     [ngClass]="{'is-invalid':f.submitted && pass.invalid}"
+                     required
+                     minlength="8"
+              >
+            </div>
+            <div *ngIf="f.submitted && pass.invalid" class="invalid-input">
+              <div *ngIf="pass.errors?.required">Password is required</div>
+              <div *ngIf="pass.errors?.minlength">Password is too small (at least 8 characters)</div>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <input type="password"
+                     id="inputPassword2"
+                     class="form-control"
+                     placeholder="Confirm password"
+                     name="password"
+                     [(ngModel)]="model.confirm_password"
+                     #conf_pass="ngModel"
+                     [ngClass]="{'is-invalid':f.submitted && conf_pass.invalid}"
+                     required
+                     minlength="8"
+              >
+            </div>
+            <div *ngIf="!validate() " class="invalid-input">Wrong confirm password !</div>
+            <br>
+            <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit"
+                    routerLink="/register">Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
